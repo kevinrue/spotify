@@ -44,8 +44,9 @@ spatialise <- function(path, return.type = c("raw", "flatten"), extras = list())
   
   img_data <- image_data(img_flat)
   return(img_data)
+  
   # data
-  non_white <- data[1, ,] != "ff"
+  non_white <- img_data[1, ,] != "ff"
   storage.mode(non_white) <- "integer"
   img_raw
 }
