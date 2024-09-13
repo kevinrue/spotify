@@ -18,6 +18,7 @@
 #' 
 #' spatialise(
 #'   path = system.file(package = "spatialist", "Kevin.jpg"),
+#'   return.type = "flatten",
 #'   extras = list(
 #'     image_flatten = list(operator = "Threshold")
 #'   )
