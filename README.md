@@ -1,13 +1,11 @@
-<img src="inst/www/iSEE.png" align="right" alt="" width="120" />
-
-# _iSEE_ - The interactive SummarizedExperiment Explorer 
+# _spatialist_ - Spatialise your images!
 
 <!-- badges: start -->
 [![GitHub issues](https://img.shields.io/github/issues/iSEE/iSEE)](https://github.com/iSEE/iSEE/issues)
 [![GitHub pulls](https://img.shields.io/github/issues-pr/iSEE/iSEE)](https://github.com/iSEE/iSEE/pulls)
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![R-CMD-check-bioc](https://github.com/iSEE/iSEE/workflows/R-CMD-check-bioc/badge.svg)](https://github.com/iSEE/iSEE/actions)
-[![Codecov test coverage](https://codecov.io/gh/iSEE/iSEE/branch/main/graph/badge.svg)](https://app.codecov.io/gh/iSEE/iSEE?branch=main)
+
 <!-- badges: end -->
 
 ## Bioconductor release status

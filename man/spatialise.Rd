@@ -20,16 +20,17 @@ A `ggplot` object.
 Main function.
 }
 \examples{
-spatialise(
+kevin <- spatialise(
   path = system.file(package = "spatialist", "Kevin.jpg")
 )
+print(kevin)
 
-
-spatialise(
+kevin <- spatialise(
   path = system.file(package = "spatialist", "Kevin.jpg"),
   return.type = "flatten",
   extras = list(
     image_flatten = list(operator = "Threshold")
   )
 )
+print(kevin)
 }

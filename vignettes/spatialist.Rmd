@@ -51,6 +51,26 @@ Once installed, the package can be loaded and attached to your current workspace
 library(spatialist)
 ```
 
+# Demonstration
+
+```{r}
+kevin <- spatialise(
+  path = system.file(package = "spatialist", "Kevin.jpg")
+)
+print(kevin)
+```
+
+```{r}
+kevin <- spatialise(
+  path = system.file(package = "spatialist", "Kevin.jpg"),
+  return.type = "flatten",
+  extras = list(
+    image_flatten = list(operator = "Threshold")
+  )
+)
+print(kevin)
+```
+
 # Additional information
 
 The GitHub repository contains the development version of the package, where new functionality is added over time.

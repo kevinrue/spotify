@@ -11,18 +11,19 @@
 #' @importFrom magick image_read image_flatten image_data
 #'
 #' @examples
-#' spatialise(
+#' kevin <- spatialise(
 #'   path = system.file(package = "spatialist", "Kevin.jpg")
 #' )
+#' print(kevin)
 #' 
-#' 
-#' spatialise(
+#' kevin <- spatialise(
 #'   path = system.file(package = "spatialist", "Kevin.jpg"),
 #'   return.type = "flatten",
 #'   extras = list(
 #'     image_flatten = list(operator = "Threshold")
 #'   )
 #' )
+#' print(kevin)
 spatialise <- function(path, return.type = c("raw", "flatten"), extras = list()) {
   return.type <- match.arg(return.type)
   
