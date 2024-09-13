@@ -4,10 +4,14 @@
 \alias{spatialise}
 \title{Spatialise Images}
 \usage{
-spatialise(path)
+spatialise(path, return.type = c("raw", "flatten"), extras = list())
 }
 \arguments{
 \item{path}{Path to the input file.}
+
+\item{return.type}{Type of image to return.}
+
+\item{extras}{List of options for sub-functions.}
 }
 \value{
 A `ggplot` object.
@@ -16,5 +20,15 @@ A `ggplot` object.
 Main function.
 }
 \examples{
-spatialise(system.file(package = "spatialist", "Kevin.jpg"))
+spatialise(
+  path = system.file(package = "spatialist", "Kevin.jpg")
+)
+
+
+spatialise(
+  path = system.file(package = "spatialist", "Kevin.jpg"),
+  extras = list(
+    image_flatten = list(operator = "Threshold")
+  )
+)
 }
