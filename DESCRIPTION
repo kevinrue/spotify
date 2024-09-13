@@ -11,7 +11,8 @@ Suggests:
     covr,
     BiocStyle,
     knitr,
-    rmarkdown
+    rmarkdown,
+    pkgdown
 URL: https://github.com/kevinrue/spatialist
 BugReports: https://github.com/kevinrue/spatialist/issues
 License: MIT + file LICENSE
