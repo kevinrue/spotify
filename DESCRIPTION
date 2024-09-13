@@ -1,0 +1,69 @@
+Package: iSEE
+Title: Interactive SummarizedExperiment Explorer
+Version: 2.17.4
+Date: 2024-07-24
+Authors@R: c(person("Kevin", "Rue-Albrecht", role = c("aut", "cre"), email = "kevinrue67@gmail.com", comment = c(ORCID = "0000-0003-3899-3872")),
+    person("Federico", "Marini", role="aut", email="marinif@uni-mainz.de", comment = c(ORCID = '0000-0003-3252-7758')),
+    person("Charlotte", "Soneson", role="aut", email="charlottesoneson@gmail.com", comment = c(ORCID = '0000-0003-3833-2169')),
+    person("Aaron", "Lun", role="aut", email="infinite.monkeys.with.keyboards@gmail.com", comment = c(ORCID = '0000-0002-3564-4813')))
+Description: Create an interactive Shiny-based graphical user interface 
+    for exploring data stored in SummarizedExperiment objects, including 
+    row- and column-level metadata. The interface supports transmission of 
+    selections between plots and tables, code tracking, interactive tours, 
+    interactive or programmatic initialization, preservation of app state,
+    and extensibility to new panel types via S4 classes. Special attention 
+    is given to single-cell data in a SingleCellExperiment object with 
+    visualization of dimensionality reduction results.
+Depends:
+    SummarizedExperiment, 
+    SingleCellExperiment
+Imports:
+    methods,
+    BiocGenerics, 
+    S4Vectors,
+    utils,
+    stats,
+    shiny,
+    shinydashboard,
+    shinyAce,
+    shinyjs,
+    DT,
+    rintrojs, 
+    ggplot2,
+    ggrepel,
+    colourpicker,
+    igraph,
+    vipor,
+    mgcv,
+    graphics,
+    grDevices,
+    viridisLite,
+    shinyWidgets,
+    listviewer,
+    ComplexHeatmap,
+    circlize,
+    grid
+Suggests:
+    testthat,
+    covr,
+    BiocStyle,
+    knitr,
+    rmarkdown,
+    scRNAseq,
+    TENxPBMCData,
+    scater,
+    DelayedArray,
+    HDF5Array,
+    RColorBrewer,
+    viridis,
+    htmltools,
+    GenomicRanges
+URL: https://github.com/iSEE/iSEE
+BugReports: https://github.com/iSEE/iSEE/issues
+biocViews: CellBasedAssays, Clustering, DimensionReduction, FeatureExtraction,
+    GeneExpression, GUI, ImmunoOncology, ShinyApps, SingleCell, Transcription,
+    Transcriptomics, Visualization
+License: MIT + file LICENSE
+VignetteBuilder: knitr
+Encoding: UTF-8
+RoxygenNote: 7.3.2

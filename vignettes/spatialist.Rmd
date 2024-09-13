@@ -1,0 +1,71 @@
+---
+title: >
+  Getting started
+author:
+- name: Kevin Rue-Albrecht
+  affiliation: 
+  - &id4 MRC WIMM Centre for Computational Biology, University of Oxford, Oxford, OX3 9DS, UK
+  email: kevinrue67@gmail.com
+date: "`r BiocStyle::doc_date()`"
+package: "`r BiocStyle::pkg_ver('spatialist')`"
+output: 
+  BiocStyle::html_document:
+    toc_float: true
+vignette: >
+  %\VignetteIndexEntry{Getting started}
+  %\VignetteEncoding{UTF-8}  
+  %\VignettePackage{spatialist}
+  %\VignetteKeywords{Visualization}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
+bibliography: spatialist.bib
+---
+
+**Compiled date**: `r Sys.Date()`
+
+**Last edited**: 2020-04-20
+
+**License**: `r packageDescription("spatialist")[["License"]]`
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+    collapse = TRUE,
+    comment = "#>",
+    error = FALSE,
+    warning = FALSE,
+    message = FALSE,
+    crop = NULL
+)
+stopifnot(requireNamespace("htmltools"))
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
+```
+
+# Introduction 
+
+`r BiocStyle::Githubpkg("kevinrue/spatialist")` is an *R* package.
+
+Once installed, the package can be loaded and attached to your current workspace as follows:
+
+```{r library}
+library(spatialist)
+```
+
+# Additional information
+
+The GitHub repository contains the development version of the package, where new functionality is added over time.
+The authors appreciate well-considered suggestions for improvements or new features, or even better, pull requests.
+
+If you use `r BiocStyle::Githubpkg("kevinrue/spatialist")` for your analysis, please cite it as shown below:
+
+```{r citation}
+citation("spatialist")
+```
+
+# Session Info {.unnumbered}
+
+```{r sessioninfo}
+sessionInfo()
+```
+
+# References {.unnumbered}
