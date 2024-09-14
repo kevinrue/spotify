@@ -4,12 +4,14 @@
 #'
 #' @param path Path to the input file.
 #' @param return.type Type of image to return.
+#' @param downsample Integer resolution or `FALSE`.
 #' @param img2matrix.FUN Function converting image data to a matrix.
 #' @param extras List of options for sub-functions.
 #'
 #' @return A `ggplot` object.
 #' @export
 #' @importFrom magick image_read image_flatten image_data
+#' @importFrom iSEE subsetPointsByGrid
 #'
 #' @examples
 #' kevin <- spatialise(
@@ -27,7 +29,8 @@
 #' print(kevin)
 spatialise <- function(
   path,
-  return.type = c("raw", "flatten", "data", "matrix", "heatmap"),
+  return.type = c("raw", "flatten", "data", "matrix", "heatmap", "xy", "point", "jitter"),
+  downsample = 150,
   img2matrix.FUN = firstLayerNotWhite,
   extras = list()
 ) {
@@ -55,7 +58,6 @@ spatialise <- function(
     return(img_data)
   }
   
-  # data
   img_matrix <- img2matrix.FUN(img_data)
   
   if (return.type == "matrix") {
@@ -65,5 +67,37 @@ spatialise <- function(
   if (return.type == "heatmap") {
     return(make_heatmap(img_matrix))
   }
+  
+  xy_coord <- as.data.frame(which(img_matrix == 1, arr.ind = TRUE))
+  xy_coord <- data.frame(
+    x = -xy_coord$col,
+    y = xy_coord$row
+  )
+  
+  if (return.type == "xy") {
+    return(xy_coord)
+  }
+  
+  if (!isFALSE(downsample)) {
+    keep <- subsetPointsByGrid(
+      X = xy_coord$x,
+      Y = xy_coord$y,
+      resolution = downsample
+    )
+    xy_coord <- xy_coord[keep, ]
+  }
+  
+  if (return.type == "point") {
+    return(make_point(xy_coord))
+  }
+  
+  
+  
+  # jitter
+  
+  # Get matrix size to preserve original aspect ratio
+  x_range <- c(1, ncol(img_matrix))
+  y_range <- c(1, nrow(img_matrix))
+  # Turn binary matrix into point coordinates
   
 }

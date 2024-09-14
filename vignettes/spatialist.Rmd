@@ -54,15 +54,20 @@ library(spatialist)
 # Demonstration
 
 ```{r}
+input_file <- system.file(package = "spatialist", "Kevin.jpg")
+```
+
+
+```{r}
 kevin <- spatialise(
-  path = system.file(package = "spatialist", "Kevin.jpg")
+  path = input_file
 )
 print(kevin)
 ```
 
 ```{r}
 kevin <- spatialise(
-  path = system.file(package = "spatialist", "Kevin.jpg"),
+  path = input_file,
   return.type = "flatten",
   extras = list(
     image_flatten = list(operator = "Modulate")
@@ -73,7 +78,7 @@ print(kevin)
 
 ```{r}
 kevin <- spatialise(
-  path = system.file(package = "spatialist", "Kevin.jpg"),
+  path = input_file,
   return.type = "data"
 )
 kevin
@@ -81,7 +86,7 @@ kevin
 
 ```{r}
 kevin <- spatialise(
-  path = system.file(package = "spatialist", "Kevin.jpg"),
+  path = input_file,
   return.type = "matrix"
 )
 dim(kevin)
@@ -89,8 +94,23 @@ dim(kevin)
 
 ```{r}
 spatialise(
-  path = system.file(package = "spatialist", "Kevin.jpg"),
+  path = input_file,
   return.type = "heatmap"
+)
+```
+
+```{r}
+kevin <- spatialise(
+  path = input_file,
+  return.type = "xy"
+)
+head(kevin)
+```
+
+```{r}
+spatialise(
+  path = input_file,
+  return.type = "point"
 )
 ```
 

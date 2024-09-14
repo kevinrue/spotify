@@ -6,7 +6,8 @@
 \usage{
 spatialise(
   path,
-  return.type = c("raw", "flatten", "data", "matrix", "heatmap"),
+  return.type = c("raw", "flatten", "data", "matrix", "heatmap", "xy", "point", "jitter"),
+  downsample = 150,
   img2matrix.FUN = firstLayerNotWhite,
   extras = list()
 )
@@ -15,6 +16,8 @@ spatialise(
 \item{path}{Path to the input file.}
 
 \item{return.type}{Type of image to return.}
+
+\item{downsample}{Integer resolution or `FALSE`.}
 
 \item{img2matrix.FUN}{Function converting image data to a matrix.}
 

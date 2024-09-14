@@ -5,15 +5,17 @@ Date: 2024-09-13
 Authors@R: c(person("Kevin", "Rue-Albrecht", role = c("aut", "cre"), email = "kevinrue67@gmail.com", comment = c(ORCID = "0000-0003-3899-3872")))
 Description: Spatialise images.
 Imports:
-    magick
+  ggplot2,
+  iSEE,
+  magick
 Suggests:
-    testthat,
-    covr,
-    BiocStyle,
-    knitr,
-    rmarkdown,
-    pkgdown,
-    htmltools
+  testthat,
+  covr,
+  BiocStyle,
+  knitr,
+  rmarkdown,
+  pkgdown,
+  htmltools
 URL: https://github.com/kevinrue/spatialist
 BugReports: https://github.com/kevinrue/spatialist/issues
 License: MIT + file LICENSE
