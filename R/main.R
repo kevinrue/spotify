@@ -97,7 +97,7 @@ spatialise <- function(
     return(make_jitter(xy_coord, jitter))
   }
   
-  xy_coord$cluster <- cluster(xy_coord)
+  xy_coord$cluster <- cluster(xy_coord, extras$cluster)
   
   if (return.type == "spatial") {
     return(make_spatial(xy_coord, jitter))

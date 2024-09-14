@@ -4,14 +4,12 @@
 \alias{cluster}
 \title{Title}
 \usage{
-cluster(xy, k.nn = 10, k.cluster = 10)
+cluster(xy, extras)
 }
 \arguments{
 \item{xy}{Data frame.}
 
-\item{k.nn}{Number of nearest neighbours.}
-
-\item{k.cluster}{Number of clusters.}
+\item{extras}{List of additional parameters. See Details.}
 }
 \value{
 Factor.

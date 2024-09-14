@@ -1,8 +1,7 @@
 #' Title
 #'
 #' @param xy Data frame.
-#' @param k.nn Number of nearest neighbours.
-#' @param k.cluster Number of clusters.
+#' @param extras List of additional parameters. See Details.
 #'
 #' @return Factor.
 #' @export
@@ -14,7 +13,9 @@
 #'   y = rnorm(1000)
 #' )
 #' cluster(df)
-cluster <- function(xy, k.nn = 10, k.cluster = 10) {
+cluster <- function(xy, extras) {
+  k.nn <- ifelse(is.null(extras$k.nn), 10, extras$k.nn)
+  k.cluster <- ifelse(is.null(extras$k.cluster), 10, extras$k.cluster)
   knn.dist <- kNNdist(as.matrix(xy[, c("x", "y")]), k = k.nn)
   dist.breaks <- unique(quantile(knn.dist, probs = seq(0, 1, length.out = k.cluster+1)))
   dist.breaks[1] <- dist.breaks[1]-1
