@@ -16,5 +16,5 @@ make_point(xy_coord)
 Scatterplot
 }
 \examples{
-make_point(data.frame(row = 1, column = 1))
+make_point(data.frame(x = 1, y = 1))
 }
