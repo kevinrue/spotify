@@ -1,4 +1,4 @@
 library(testthat)
-library(iSEE)
+library(spatialist)
 
-test_check("iSEE")
+test_check("spatialist")
