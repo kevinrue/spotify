@@ -134,10 +134,10 @@ spatialise(
 spatialise(
   path = input_file,
   return.type = "spatial",
-  downsample = 100,
+  downsample = 75,
   jitter = 5,
   extras = list(
-    cluster = list(k.nn = 50, k.cluster = 10)
+    cluster = list(k.nn = 100, k.cluster = 10)
   )
 ) + theme_void()
 ```
