@@ -24,7 +24,7 @@
 #'   )
 #' )
 #' print(kevin)
-spatialise <- function(path, return.type = c("raw", "flatten"), extras = list()) {
+spatialise <- function(path, return.type = c("raw", "flatten"), layer = 1L, extras = list()) {
   return.type <- match.arg(return.type)
   
   if (! "image_flatten" %in% names(extras)) {
@@ -47,7 +47,7 @@ spatialise <- function(path, return.type = c("raw", "flatten"), extras = list())
   return(img_data)
   
   # data
-  non_white <- img_data[1, ,] != "ff"
+  non_white <- img_data[layer, ,] != "ff"
   storage.mode(non_white) <- "integer"
   img_raw
 }
