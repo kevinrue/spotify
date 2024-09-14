@@ -5,6 +5,7 @@
 #' @param path Path to the input file.
 #' @param return.type Type of image to return.
 #' @param downsample Integer resolution or `FALSE`.
+#' @param jitter Amount of jitter.
 #' @param img2matrix.FUN Function converting image data to a matrix.
 #' @param extras List of options for sub-functions.
 #'
@@ -31,6 +32,7 @@ spatialise <- function(
   path,
   return.type = c("raw", "flatten", "data", "matrix", "heatmap", "xy", "point", "jitter"),
   downsample = 150,
+  jitter = 1,
   img2matrix.FUN = firstLayerNotWhite,
   extras = list()
 ) {
@@ -74,10 +76,6 @@ spatialise <- function(
     y = -xy_coord$col
   )
   
-  if (return.type == "xy") {
-    return(xy_coord)
-  }
-  
   if (!isFALSE(downsample)) {
     keep <- subsetPointsByGrid(
       X = xy_coord$x,
@@ -91,13 +89,12 @@ spatialise <- function(
     return(make_point(xy_coord))
   }
   
+  if (return.type == "xy") {
+    return(xy_coord)
+  }
   
-  
-  # jitter
-  
-  # Get matrix size to preserve original aspect ratio
-  x_range <- c(1, ncol(img_matrix))
-  y_range <- c(1, nrow(img_matrix))
-  # Turn binary matrix into point coordinates
+  if (return.type == "jitter") {
+    return(make_jitter(xy_coord, jitter))
+  }
   
 }

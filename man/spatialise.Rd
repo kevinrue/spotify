@@ -8,6 +8,7 @@ spatialise(
   path,
   return.type = c("raw", "flatten", "data", "matrix", "heatmap", "xy", "point", "jitter"),
   downsample = 150,
+  jitter = 1,
   img2matrix.FUN = firstLayerNotWhite,
   extras = list()
 )
@@ -18,6 +19,8 @@ spatialise(
 \item{return.type}{Type of image to return.}
 
 \item{downsample}{Integer resolution or `FALSE`.}
+
+\item{jitter}{Amount of jitter.}
 
 \item{img2matrix.FUN}{Function converting image data to a matrix.}
 

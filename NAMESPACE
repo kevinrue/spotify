@@ -2,6 +2,7 @@
 
 export(firstLayerNotWhite)
 export(make_heatmap)
+export(make_jitter)
 export(make_point)
 export(spatialise)
 importFrom(ComplexHeatmap,Heatmap)
