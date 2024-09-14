@@ -116,7 +116,8 @@ head(kevin)
 ```{r}
 spatialise(
   path = input_file,
-  return.type = "point"
+  return.type = "point",
+  downsample = 100
 ) + theme_void()
 ```
 
