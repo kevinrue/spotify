@@ -70,8 +70,8 @@ spatialise <- function(
   
   xy_coord <- as.data.frame(which(img_matrix == 1, arr.ind = TRUE))
   xy_coord <- data.frame(
-    x = -xy_coord$col,
-    y = xy_coord$row
+    x = xy_coord$row,
+    y = -xy_coord$col
   )
   
   if (return.type == "xy") {
