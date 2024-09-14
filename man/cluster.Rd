@@ -4,7 +4,7 @@
 \alias{cluster}
 \title{Title}
 \usage{
-cluster(xy, extras)
+cluster(xy, extras = list())
 }
 \arguments{
 \item{xy}{Data frame.}

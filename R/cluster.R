@@ -13,7 +13,7 @@
 #'   y = rnorm(1000)
 #' )
 #' cluster(df)
-cluster <- function(xy, extras) {
+cluster <- function(xy, extras = list()) {
   k.nn <- ifelse(is.null(extras$k.nn), 10, extras$k.nn)
   k.cluster <- ifelse(is.null(extras$k.cluster), 10, extras$k.cluster)
   knn.dist <- kNNdist(as.matrix(xy[, c("x", "y")]), k = k.nn)
