@@ -16,6 +16,8 @@ spatialise(
 
 \item{return.type}{Type of image to return.}
 
+\item{img2matrix.FUN}{Function converting image data to a matrix.}
+
 \item{extras}{List of options for sub-functions.}
 }
 \value{

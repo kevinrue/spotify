@@ -4,6 +4,7 @@
 #'
 #' @param path Path to the input file.
 #' @param return.type Type of image to return.
+#' @param img2matrix.FUN Function converting image data to a matrix.
 #' @param extras List of options for sub-functions.
 #'
 #' @return A `ggplot` object.
