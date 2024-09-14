@@ -71,6 +71,22 @@ kevin <- spatialise(
 print(kevin)
 ```
 
+```{r}
+kevin <- spatialise(
+  path = system.file(package = "spatialist", "Kevin.jpg"),
+  return.type = "data"
+)
+kevin
+```
+
+```{r}
+kevin <- spatialise(
+  path = system.file(package = "spatialist", "Kevin.jpg"),
+  return.type = "matrix"
+)
+dim(kevin)
+```
+
 # Additional information
 
 The GitHub repository contains the development version of the package, where new functionality is added over time.

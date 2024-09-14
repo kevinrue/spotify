@@ -26,8 +26,8 @@
 #' )
 #' print(kevin)
 spatialise <- function(
-    path,
-  return.type = c("raw", "flatten", "matrix"),
+  path,
+  return.type = c("raw", "flatten", "data", "matrix"),
   img2matrix.FUN = firstLayerNotWhite,
   extras = list()
 ) {
@@ -50,7 +50,10 @@ spatialise <- function(
   }
   
   img_data <- image_data(img_flat)
-  return(img_data)
+  
+  if (return.type == "data") {
+    return(img_data)
+  }
   
   # data
   img_matrix <- img2matrix.FUN(img_data)
