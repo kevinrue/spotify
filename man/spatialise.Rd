@@ -6,7 +6,7 @@
 \usage{
 spatialise(
   path,
-  return.type = c("raw", "flatten", "data", "matrix"),
+  return.type = c("raw", "flatten", "data", "matrix", "heatmap"),
   img2matrix.FUN = firstLayerNotWhite,
   extras = list()
 )

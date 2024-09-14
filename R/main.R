@@ -27,7 +27,7 @@
 #' print(kevin)
 spatialise <- function(
   path,
-  return.type = c("raw", "flatten", "data", "matrix"),
+  return.type = c("raw", "flatten", "data", "matrix", "heatmap"),
   img2matrix.FUN = firstLayerNotWhite,
   extras = list()
 ) {
@@ -60,6 +60,10 @@ spatialise <- function(
   
   if (return.type == "matrix") {
     return(img_matrix)
+  }
+  
+  if (return.type == "heatmap") {
+    return(make_heatmap(img_matrix))
   }
   
 }
