@@ -30,7 +30,7 @@
 #' print(kevin)
 spatialise <- function(
   path,
-  return.type = c("raw", "flatten", "data", "matrix", "heatmap", "xy", "point", "jitter"),
+  return.type = c("raw", "flatten", "data", "matrix", "heatmap", "xy", "point", "jitter", "spatial"),
   downsample = 150,
   jitter = 1,
   img2matrix.FUN = firstLayerNotWhite,
@@ -95,6 +95,12 @@ spatialise <- function(
   
   if (return.type == "jitter") {
     return(make_jitter(xy_coord, jitter))
+  }
+  
+  xy_coord$cluster <- cluster(xy_coord)
+  
+  if (return.type == "spatial") {
+    return(make_spatial(xy_coord, jitter))
   }
   
 }

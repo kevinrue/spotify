@@ -130,6 +130,15 @@ spatialise(
 ) + theme_void()
 ```
 
+```{r}
+spatialise(
+  path = input_file,
+  return.type = "spatial",
+  downsample = 100,
+  jitter = 5
+) + theme_void()
+```
+
 # Additional information
 
 The GitHub repository contains the development version of the package, where new functionality is added over time.

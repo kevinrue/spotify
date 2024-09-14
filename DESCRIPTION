@@ -6,6 +6,7 @@ Authors@R: c(person("Kevin", "Rue-Albrecht", role = c("aut", "cre"), email = "ke
 Description: Spatialise images.
 Imports:
   ComplexHeatmap,
+  dbscan,
   ggplot2,
   iSEE,
   magick

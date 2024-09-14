@@ -29,3 +29,19 @@ make_jitter <- function(xy_coord, jitter) {
     geom_jitter(width = jitter, height = jitter) +
     coord_fixed()
 }
+
+#' Spatial Plot
+#'
+#' @param xy_coord `data.frame` of XY coordinates.
+#'
+#' @return [`ggplot`] object.
+#' @export
+#' @importFrom ggplot2 ggplot aes geom_point coord_fixed
+#'
+#' @examples
+#' make_jitter(data.frame(x = 1, y = 1))
+make_spatial <- function(xy_coord, jitter) {
+  ggplot(xy_coord, aes(x, y, colour = cluster)) +
+    geom_jitter(width = jitter, height = jitter) +
+    coord_fixed()
+}
