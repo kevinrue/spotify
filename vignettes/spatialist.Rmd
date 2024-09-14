@@ -47,8 +47,14 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 
 Once installed, the package can be loaded and attached to your current workspace as follows:
 
-```{r library}
+```{r library, message=FALSE}
 library(spatialist)
+```
+
+Other helpful libraries.
+
+```{r, message=FALSE}
+library(ggplot2)
 ```
 
 # Demonstration
@@ -111,7 +117,7 @@ head(kevin)
 spatialise(
   path = input_file,
   return.type = "point"
-)
+) + theme_void()
 ```
 
 # Additional information
