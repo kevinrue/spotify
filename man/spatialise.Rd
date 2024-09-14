@@ -4,7 +4,12 @@
 \alias{spatialise}
 \title{Spatialise Images}
 \usage{
-spatialise(path, return.type = c("raw", "flatten"), extras = list())
+spatialise(
+  path,
+  return.type = c("raw", "flatten"),
+  img2matrix.FUN = firstLayerNotWhite,
+  extras = list()
+)
 }
 \arguments{
 \item{path}{Path to the input file.}
