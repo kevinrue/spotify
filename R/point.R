@@ -17,6 +17,7 @@ make_point <- function(xy_coord) {
 #' Jitterplot
 #'
 #' @param xy_coord `data.frame` of XY coordinates.
+#' @param jitter Amount of jitter.
 #'
 #' @return [`ggplot`] object.
 #' @export

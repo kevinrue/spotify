@@ -8,6 +8,8 @@ make_jitter(xy_coord, jitter)
 }
 \arguments{
 \item{xy_coord}{`data.frame` of XY coordinates.}
+
+\item{jitter}{Amount of jitter.}
 }
 \value{
 [`ggplot`] object.
