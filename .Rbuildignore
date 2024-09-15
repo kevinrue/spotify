@@ -2,5 +2,10 @@
 ^renv\.lock$
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^\.gitignore$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
 ^.github$
+^CODE_OF_CONDUCT\.md$
 ^LICENSE\.md$
