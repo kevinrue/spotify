@@ -34,6 +34,7 @@ make_jitter <- function(xy_coord, jitter) {
 #' Spatial Plot
 #'
 #' @param xy_coord `data.frame` of XY coordinates.
+#' @param jitter Amount of jitter.
 #'
 #' @return [`ggplot`] object.
 #' @export
