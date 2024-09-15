@@ -21,7 +21,7 @@ make_point <- function(xy_coord) {
 #'
 #' @return [`ggplot`] object.
 #' @export
-#' @importFrom ggplot2 ggplot aes geom_point coord_fixed
+#' @importFrom ggplot2 ggplot aes geom_jitter coord_fixed
 #'
 #' @examples
 #' make_jitter(data.frame(x = 1, y = 1))
