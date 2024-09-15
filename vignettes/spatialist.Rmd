@@ -139,7 +139,7 @@ spatialise(
   extras = list(
     cluster = list(k.nn = 100, k.cluster = 10)
   )
-) + theme_void()
+) + theme_void() + guides(colour = "none")
 ```
 
 # Additional information
