@@ -142,6 +142,17 @@ spatialise(
 ) + theme_void() + guides(colour = "none")
 ```
 
+```{r}
+spatialise(
+  path = input_file,
+  return.type = "visium",
+  downsample = 50,
+  extras = list(
+    cluster = list(k.nn = 100, k.cluster = 10)
+  )
+) + theme_void() + guides(colour = "none")
+```
+
 # Additional information
 
 The GitHub repository contains the development version of the package, where new functionality is added over time.

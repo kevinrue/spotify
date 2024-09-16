@@ -7,7 +7,7 @@
 spatialise(
   path,
   return.type = c("raw", "flatten", "data", "matrix", "heatmap", "xy", "point", "jitter",
-    "spatial"),
+    "spatial", "visium"),
   downsample = 150,
   jitter = 1,
   img2matrix.FUN = firstLayerNotWhite,

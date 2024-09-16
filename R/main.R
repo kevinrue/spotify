@@ -30,7 +30,7 @@
 #' print(kevin)
 spatialise <- function(
   path,
-  return.type = c("raw", "flatten", "data", "matrix", "heatmap", "xy", "point", "jitter", "spatial"),
+  return.type = c("raw", "flatten", "data", "matrix", "heatmap", "xy", "point", "jitter", "spatial", "visium"),
   downsample = 150,
   jitter = 1,
   img2matrix.FUN = firstLayerNotWhite,
@@ -101,6 +101,10 @@ spatialise <- function(
   
   if (return.type == "spatial") {
     return(make_spatial(xy_coord, jitter))
+  }
+  
+  if (return.type == "visium") {
+    return(make_visium(xy_coord, downsample))
   }
   
 }
