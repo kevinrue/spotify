@@ -22,6 +22,5 @@ cluster <- function(xy, extras = list()) {
   dist.breaks[length(dist.breaks)] <- dist.breaks[length(dist.breaks)]+1
   dist.cluster <- cut(knn.dist, dist.breaks)
   levels(dist.cluster) <- seq_along(levels(dist.cluster))
-  print(table(dist.cluster))
   dist.cluster
 }
