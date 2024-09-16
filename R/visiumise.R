@@ -1,3 +1,4 @@
+#' @importFrom Biobase matchpt
 make_visium <- function(xy, resolution) {
   x_gap <- round((max(xy$x) - min(xy$x)) / resolution)
   y_gap <- round((max(xy$y) - min(xy$y)) / resolution)
@@ -7,7 +8,7 @@ make_visium <- function(xy, resolution) {
   visium_xy <- round(expand.grid(x_grid, y_grid))
   colnames(visium_xy) <- c("x", "y")
   visium_xy$x <- visium_xy$x + ifelse(visium_xy$y %in% y_grid[c(TRUE, FALSE)], xy_gap / 2, 0)
-  visium_xy$nearest_index <- Biobase::matchpt(as.matrix(visium_xy), as.matrix(xy[, c("x", "y")]))$index
+  visium_xy$nearest_index <- matchpt(as.matrix(visium_xy), as.matrix(xy[, c("x", "y")]))$index
   visium_xy$cluster <- xy$cluster[visium_xy$nearest_index]
   visium_xy$distance_to_nearest <- distance(visium_xy, xy[visium_xy$nearest_index, ])
   visium_xy <- subset(visium_xy, distance_to_nearest < xy_gap)
