@@ -11,7 +11,7 @@ make_visium <- function(xy, resolution) {
   visium_xy$nearest_index <- matchpt(as.matrix(visium_xy), as.matrix(xy[, c("x", "y")]))$index
   visium_xy$cluster <- xy$cluster[visium_xy$nearest_index]
   visium_xy$distance_to_nearest <- distance(visium_xy, xy[visium_xy$nearest_index, ])
-  visium_xy <- subset(visium_xy, distance_to_nearest < xy_gap)
+  visium_xy <- subset(visium_xy, distance_to_nearest < xy_gap / 2)
   ggplot(visium_xy, aes(x, y, colour = cluster)) +
     geom_point() +
     coord_fixed()
