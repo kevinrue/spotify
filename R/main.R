@@ -93,14 +93,17 @@ spatialise <- function(
     return(xy_coord)
   }
   
+  xy_coord$x <- xy_coord$x + runif(nrow(xy_coord), min = -jitter, max = jitter)
+  xy_coord$y <- xy_coord$y + runif(nrow(xy_coord), min = -jitter, max = jitter)
+  
   if (return.type == "jitter") {
-    return(make_jitter(xy_coord, jitter))
+    return(make_point(xy_coord))
   }
   
   xy_coord$cluster <- cluster(xy_coord, extras$cluster)
   
   if (return.type == "spatial") {
-    return(make_spatial(xy_coord, jitter))
+    return(make_spatial(xy_coord))
   }
   
   if (return.type == "visium") {

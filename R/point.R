@@ -44,6 +44,6 @@ make_jitter <- function(xy_coord, jitter) {
 #' make_jitter(data.frame(x = 1, y = 1))
 make_spatial <- function(xy_coord, jitter) {
   ggplot(xy_coord, aes(x, y, colour = cluster)) +
-    geom_jitter(width = jitter, height = jitter) +
+    geom_point() +
     coord_fixed()
 }
