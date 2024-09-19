@@ -59,10 +59,13 @@ library(ggplot2)
 
 # Demonstration
 
+## Input file
+
 ```{r}
 input_file <- system.file(package = "spatialist", "Kevin.jpg")
 ```
 
+## Output types
 
 ```{r}
 kevin <- spatialise(
@@ -137,7 +140,7 @@ spatialise(
   downsample = 75,
   jitter = 5,
   extras = list(
-    cluster = list(k.nn = 100, k.cluster = 10)
+    cluster = list(k.nn = 50, k.cluster = 10)
   )
 ) + theme_void() + guides(colour = "none")
 ```
@@ -148,7 +151,7 @@ spatialise(
   return.type = "visium",
   downsample = 50,
   extras = list(
-    cluster = list(k.nn = 100, k.cluster = 10)
+    cluster = list(k.nn = 50, k.cluster = 10)
   )
 ) + theme_void() + guides(colour = "none")
 ```
