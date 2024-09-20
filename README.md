@@ -1,10 +1,10 @@
 # _spatialist_ - Spatialise your images!
 
 <!-- badges: start -->
-[![GitHub issues](https://img.shields.io/github/issues/iSEE/iSEE)](https://github.com/iSEE/iSEE/issues)
-[![GitHub pulls](https://img.shields.io/github/issues-pr/iSEE/iSEE)](https://github.com/iSEE/iSEE/pulls)
+[![GitHub issues](https://img.shields.io/github/issues/kevinrue/spatialist)](https://github.com/kevinrue/spatialist/issues)
+[![GitHub pulls](https://img.shields.io/github/issues-pr/kevinrue/spatialist)](https://github.com/kevinrue/spatialist/pulls)
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
-[![R-CMD-check-bioc](https://github.com/iSEE/iSEE/workflows/R-CMD-check-bioc/badge.svg)](https://github.com/iSEE/iSEE/actions)
+[![R-CMD-check-bioc](https://github.com/kevinrue/spatialist/workflows/R-CMD-check-bioc/badge.svg)](https://github.com/kevinrue/spatialist/actions)
 
 <!-- badges: end -->
 
