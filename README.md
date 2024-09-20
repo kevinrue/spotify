@@ -14,14 +14,11 @@ The _spatialist_ package provides ...
 
 ## Installation
 
-_iSEE_ can be easily installed from Bioconductor using `BiocManager::install()`:
+_spatalist_ can be easily installed from GitHub using `BiocManager::install()`:
 
 ```r
-if (!requireNamespace("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-BiocManager::install("iSEE")
-# or also...
-BiocManager::install("iSEE", dependencies = TRUE)
+install.packages("remotes")
+remotes::install_github("kevinrue/spatialist")
 ```
 
 ## Functionalities
@@ -30,4 +27,4 @@ Spatialise images
 
 ## Code of Conduct
   
-Please note that the iSEE project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
+Please note that the spatialist project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
