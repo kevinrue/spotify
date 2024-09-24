@@ -4,12 +4,12 @@
 \alias{make_spatial}
 \title{Spatial Plot}
 \usage{
-make_spatial(xy_coord, jitter)
+make_spatial(xy_coord, point.size)
 }
 \arguments{
 \item{xy_coord}{`data.frame` of XY coordinates.}
 
-\item{jitter}{Amount of jitter.}
+\item{point.size}{Point size}
 }
 \value{
 [`ggplot`] object.

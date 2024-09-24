@@ -10,6 +10,7 @@ spatialise(
     "spatial", "visium"),
   downsample = 150,
   jitter = 1,
+  point.size = 1,
   img2matrix.FUN = firstLayerNotWhite,
   extras = list()
 )
@@ -22,6 +23,8 @@ spatialise(
 \item{downsample}{Integer resolution or `FALSE`.}
 
 \item{jitter}{Amount of jitter.}
+
+\item{point.size}{Point size}
 
 \item{img2matrix.FUN}{Function converting image data to a matrix.}
 

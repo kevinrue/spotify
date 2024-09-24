@@ -6,6 +6,7 @@
 #' @param return.type Type of image to return.
 #' @param downsample Integer resolution or `FALSE`.
 #' @param jitter Amount of jitter.
+#' @param point.size Point size
 #' @param img2matrix.FUN Function converting image data to a matrix.
 #' @param extras List of options for sub-functions.
 #'
@@ -33,6 +34,7 @@ spatialise <- function(
   return.type = c("raw", "flatten", "data", "matrix", "heatmap", "xy", "point", "jitter", "spatial", "visium"),
   downsample = 150,
   jitter = 1,
+  point.size = 1,
   img2matrix.FUN = firstLayerNotWhite,
   extras = list()
 ) {
@@ -103,7 +105,7 @@ spatialise <- function(
   xy_coord$cluster <- cluster(xy_coord, extras$cluster)
   
   if (return.type == "spatial") {
-    return(make_spatial(xy_coord))
+    return(make_spatial(xy_coord, point.size))
   }
   
   if (return.type == "visium") {

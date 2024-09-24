@@ -34,7 +34,7 @@ make_jitter <- function(xy_coord, jitter) {
 #' Spatial Plot
 #'
 #' @param xy_coord `data.frame` of XY coordinates.
-#' @param jitter Amount of jitter.
+#' @param point.size Point size
 #'
 #' @return [`ggplot`] object.
 #' @export
@@ -42,8 +42,8 @@ make_jitter <- function(xy_coord, jitter) {
 #'
 #' @examples
 #' make_jitter(data.frame(x = 1, y = 1))
-make_spatial <- function(xy_coord, jitter) {
+make_spatial <- function(xy_coord, point.size) {
   ggplot(xy_coord, aes(x, y, colour = cluster)) +
-    geom_point() +
+    geom_point(size = point.size) +
     coord_fixed()
 }
