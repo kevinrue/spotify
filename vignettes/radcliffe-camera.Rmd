@@ -69,14 +69,18 @@ download.file(url = "https://lh3.googleusercontent.com/p/AF1QipOCPWTCh3keAMBiowe
 
 ## Output types
 
-```{r}
+### Raw image
+
+```{r raw}
 spatial_thing <- spatialise(
   path = input_file
 )
 print(spatial_thing)
 ```
 
-```{r}
+### Flattened image
+
+```{r flatten}
 spatial_thing <- spatialise(
   path = input_file,
   return.type = "flatten",
@@ -87,7 +91,9 @@ spatial_thing <- spatialise(
 print(spatial_thing)
 ```
 
-```{r}
+### Image data
+
+```{r data}
 spatial_thing <- spatialise(
   path = input_file,
   return.type = "data"
@@ -95,7 +101,9 @@ spatial_thing <- spatialise(
 spatial_thing
 ```
 
-```{r}
+### Processed matrix
+
+```{r matrix}
 spatial_thing <- spatialise(
   path = input_file,
   return.type = "matrix"
@@ -103,14 +111,18 @@ spatial_thing <- spatialise(
 dim(spatial_thing)
 ```
 
-```{r, fig.height=6, fig.width=7}
+### Heat map (of matrix)
+
+```{r heatmap, fig.height=6, fig.width=7}
 spatialise(
   path = input_file,
   return.type = "heatmap"
 )
 ```
 
-```{r, fig.height=6, fig.width=7}
+### Pixel coordinates
+
+```{r xy, fig.height=6, fig.width=7}
 spatial_thing <- spatialise(
   path = input_file,
   return.type = "xy"
@@ -118,7 +130,9 @@ spatial_thing <- spatialise(
 head(spatial_thing)
 ```
 
-```{r, fig.height=6, fig.width=7}
+### Scatter plot
+
+```{r point, fig.height=6, fig.width=7}
 spatialise(
   path = input_file,
   return.type = "point",
@@ -126,7 +140,9 @@ spatialise(
 ) + theme_void()
 ```
 
-```{r, fig.height=6, fig.width=7}
+### Jittered scatter plot
+
+```{r jitter, fig.height=6, fig.width=7}
 spatialise(
   path = input_file,
   return.type = "jitter",
@@ -135,7 +151,9 @@ spatialise(
 ) + theme_void()
 ```
 
-```{r, fig.height=6, fig.width=7}
+### Xenium-like
+
+```{r spatial, fig.height=6, fig.width=7}
 spatialise(
   path = input_file,
   return.type = "spatial",
@@ -151,7 +169,7 @@ spatialise(
   scale_colour_brewer(palette = "Paired")
 ```
 
-```{r, fig.height=6, fig.width=7}
+```{r visium, fig.height=6, fig.width=7}
 spatialise(
   path = input_file,
   return.type = "visium",
