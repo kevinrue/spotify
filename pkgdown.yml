@@ -1,7 +1,7 @@
-pandoc: '3.3'
+pandoc: '3.4'
 pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   radcliffe-camera: radcliffe-camera.html
   spatialist: spatialist.html
-last_built: 2024-09-25T12:48Z
+last_built: 2024-10-04T11:58Z
