@@ -169,11 +169,14 @@ spatialise(
   scale_colour_brewer(palette = "Paired")
 ```
 
+### Visium-like
+
 ```{r visium, fig.height=6, fig.width=7}
 spatialise(
   path = input_file,
   return.type = "visium",
-  downsample = 50,
+  downsample = 200,
+  point.size = 0.1,
   extras = list(
     cluster = list(k.nn = 50, k.cluster = 10)
   )
