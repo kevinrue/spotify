@@ -10,7 +10,13 @@
 
 ## Overview
 
-The _spatialist_ package provides ...
+The _spatialist_ package provides functionality to read image files
+and produce plots that simulate spatial omics data
+(e.g., 10x Genomics Visium and Xenium).
+
+## Example
+
+![Example output](https://kevinrue.github.io/spatialist/articles/spatialist_files/figure-html/unnamed-chunk-11-1.png)
 
 ## Installation
 
