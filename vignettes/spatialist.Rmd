@@ -169,7 +169,8 @@ spatialise(
 spatialise(
   path = input_file,
   return.type = "visium",
-  downsample = 50,
+  downsample = 100,
+  point.size = 0.1,
   extras = list(
     cluster = list(k.nn = 50, k.cluster = 10)
   )

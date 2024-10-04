@@ -1,5 +1,5 @@
 #' @importFrom Biobase matchpt
-make_visium <- function(xy, resolution) {
+make_visium <- function(xy, resolution, point.size) {
   x_gap <- round((max(xy$x) - min(xy$x)) / resolution)
   y_gap <- round((max(xy$y) - min(xy$y)) / resolution)
   xy_gap <- min(x_gap, y_gap)
@@ -13,7 +13,7 @@ make_visium <- function(xy, resolution) {
   visium_xy$distance_to_nearest <- distance(visium_xy, xy[visium_xy$nearest_index, ])
   visium_xy <- subset(visium_xy, distance_to_nearest < xy_gap)
   ggplot(visium_xy, aes(x, y, colour = cluster)) +
-    geom_point() +
+    geom_point(size = point.size) +
     coord_fixed()
 }
 

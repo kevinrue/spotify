@@ -109,7 +109,7 @@ spatialise <- function(
   }
   
   if (return.type == "visium") {
-    return(make_visium(xy_coord, downsample))
+    return(make_visium(xy_coord, downsample, point.size))
   }
   
 }
