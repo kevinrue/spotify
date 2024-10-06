@@ -72,7 +72,7 @@ download.file(url = "https://lh3.googleusercontent.com/p/AF1QipOCPWTCh3keAMBiowe
 
 ### Raw image
 
-```{r raw}
+```{r raw, fig.alt = "Raw image."}
 spatial_thing <- spatialise(
   path = input_file
 )
@@ -81,7 +81,7 @@ print(spatial_thing)
 
 ### Flattened image
 
-```{r flatten}
+```{r flatten, fig.alt = "Flattened image."}
 spatial_thing <- spatialise(
   path = input_file,
   return.type = "flatten",
@@ -112,9 +112,9 @@ spatial_thing <- spatialise(
 dim(spatial_thing)
 ```
 
-### Heat map (of matrix)
+### Heat map
 
-```{r heatmap, fig.height=6, fig.width=7}
+```{r heatmap, fig.alt = "Heat map.", fig.height=6, fig.width=7}
 spatialise(
   path = input_file,
   return.type = "heatmap"
@@ -133,7 +133,7 @@ head(spatial_thing)
 
 ### Scatter plot
 
-```{r point, fig.height=6, fig.width=7}
+```{r point, fig.alt = "Scatter plot.", fig.height=6, fig.width=7}
 spatialise(
   path = input_file,
   return.type = "point",
@@ -143,7 +143,7 @@ spatialise(
 
 ### Jittered scatter plot
 
-```{r jitter, fig.height=6, fig.width=7}
+```{r jitter, fig.alt = "Jittered scatter plot.", fig.height=6, fig.width=7}
 spatialise(
   path = input_file,
   return.type = "jitter",
@@ -154,7 +154,7 @@ spatialise(
 
 ### Xenium-like
 
-```{r spatial, fig.height=6, fig.width=7}
+```{r spatial, fig.alt = "Xenium-like plot.", fig.height=6, fig.width=7}
 spatialise(
   path = input_file,
   return.type = "spatial",
@@ -172,7 +172,7 @@ spatialise(
 
 ### Visium-like
 
-```{r visium, fig.height=6, fig.width=7}
+```{r visium, fig.alt = "Visium-like plot.", fig.height=6, fig.width=7}
 spatialise(
   path = input_file,
   return.type = "visium",

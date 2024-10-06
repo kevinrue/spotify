@@ -70,7 +70,7 @@ input_file <- system.file(package = "spatialist", "Kevin.jpg")
 
 ### Raw image
 
-```{r raw}
+```{r raw, fig.alt = "Raw image."}
 kevin <- spatialise(
   path = input_file
 )
@@ -79,7 +79,7 @@ print(kevin)
 
 ### Flattened image
 
-```{r flatten}
+```{r flatten, fig.alt = "Flattened image."}
 kevin <- spatialise(
   path = input_file,
   return.type = "flatten",
@@ -110,9 +110,9 @@ kevin <- spatialise(
 dim(kevin)
 ```
 
-### Heat map (of matrix)
+### Heat map
 
-```{r heatmap}
+```{r heatmap, fig.alt = "Heat map.", fig.height=6, fig.width=7}
 spatialise(
   path = input_file,
   return.type = "heatmap"
@@ -131,7 +131,7 @@ head(kevin)
 
 ### Scatter plot
 
-```{r point}
+```{r point, fig.alt = "Scatter plot."}
 spatialise(
   path = input_file,
   return.type = "point",
@@ -141,7 +141,7 @@ spatialise(
 
 ### Jittered scatter plot
 
-```{r jitter}
+```{r jitter, fig.alt = "Jittered scatter plot."}
 spatialise(
   path = input_file,
   return.type = "jitter",
@@ -152,7 +152,7 @@ spatialise(
 
 ### Xenium-like
 
-```{r spatial}
+```{r spatial, fig.alt = "Xenium-like plot."}
 spatialise(
   path = input_file,
   return.type = "spatial",
@@ -166,7 +166,7 @@ spatialise(
 
 ### Visium-like
 
-```{r visium}
+```{r visium, fig.alt = "Visium-like plot."}
 spatialise(
   path = input_file,
   return.type = "visium",
