@@ -22,7 +22,7 @@ Xenium-like                |  Visium-like
 
 ## Installation
 
-_spatalist_ can be easily installed from GitHub using `BiocManager::install()`:
+_spatalist_ can be easily installed from GitHub using `remotes::install_github()`:
 
 ```r
 install.packages("remotes")
