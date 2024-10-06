@@ -20,7 +20,7 @@ Suggests:
   rmarkdown,
   pkgdown,
   htmltools
-URL: https://github.com/kevinrue/spatialist
+URL: https://kevinrue.github.io/spatialist
 BugReports: https://github.com/kevinrue/spatialist/issues
 License: MIT + file LICENSE
 VignetteBuilder: knitr
