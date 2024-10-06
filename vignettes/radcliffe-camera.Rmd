@@ -12,9 +12,6 @@ output:
   BiocStyle::html_document:
     toc: true
     toc_float: true
-  rmarkdown::html_vignette:
-    toc: true
-    toc_float: true
 vignette: >
   %\VignetteIndexEntry{Radcliffe Camera}
   %\VignetteEncoding{UTF-8}  
