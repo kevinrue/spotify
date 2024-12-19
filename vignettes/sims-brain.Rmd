@@ -66,7 +66,7 @@ library(ggplot2)
 ## Input file
 
 ```{r}
-input_file <- system.file(package = "spatialist", "Kevin.jpg")
+input_file <- "~/Library/CloudStorage/OneDrive-Nexus365/WIMM - Sims Group/logo-brain/brain-sims-4.png"
 ```
 
 ## Output types
@@ -156,15 +156,31 @@ spatialise(
 ### Xenium-like
 
 ```{r spatial}
+# https://communications.admin.ox.ac.uk/communications-resources/visual-identity/identity-guidelines/colours
+oxford_palette <- c(
+  "#776885",
+  "#E08D79",
+  "#ED9390",
+  "#C4A29E",
+  "#D1BDD5",
+  "#994636",
+  "#AA1A2D",
+  "#7F055F",
+  "#FE615A",
+  "#D4CDF4"
+)
+names(oxford_palette) <- rev(seq_along(oxford_palette))
 spatialise(
   path = input_file,
   return.type = "spatial",
-  downsample = 75,
+  downsample = 300,
+  point.size = 0.3,
   jitter = 5,
   extras = list(
     cluster = list(k.nn = 50, k.cluster = 10)
-  )
-) + theme_void() + guides(colour = "none")
+  ),
+) + theme_void() + guides(colour = "none") +
+  scale_color_manual(values = oxford_palette)
 ```
 
 ### Visium-like
@@ -174,7 +190,7 @@ spatialise(
   path = input_file,
   return.type = "visium",
   downsample = 100,
-  point.size = 0.25,
+  point.size = 0.00001,
   extras = list(
     cluster = list(k.nn = 50, k.cluster = 10)
   )

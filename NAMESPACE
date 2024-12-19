@@ -2,6 +2,7 @@
 
 export(cluster)
 export(firstLayerNotWhite)
+export(firstLayerWhite)
 export(make_heatmap)
 export(make_jitter)
 export(make_point)

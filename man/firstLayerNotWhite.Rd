@@ -2,9 +2,12 @@
 % Please edit documentation in R/img2matrix.R
 \name{firstLayerNotWhite}
 \alias{firstLayerNotWhite}
+\alias{firstLayerWhite}
 \title{Convert Image to Matrix}
 \usage{
 firstLayerNotWhite(img_data)
+
+firstLayerWhite(img_data)
 }
 \arguments{
 \item{img_data}{magick image object.}
@@ -22,4 +25,5 @@ img <- system.file(package = "spatialist", "Kevin.jpg")
 img_raw <- image_read(path = img)
 img_data <- image_data(img_raw)
 is.matrix(firstLayerNotWhite(img_data))
+is.matrix(firstLayerWhite(img_data))
 }

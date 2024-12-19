@@ -66,7 +66,7 @@ library(ggplot2)
 ## Input file
 
 ```{r}
-input_file <- system.file(package = "spatialist", "Kevin.jpg")
+input_file <- "~/Desktop/Screenshot 2024-10-11 at 19.48.37.png"
 ```
 
 ## Output types
@@ -159,7 +159,7 @@ spatialise(
 spatialise(
   path = input_file,
   return.type = "spatial",
-  downsample = 75,
+  downsample = 150,
   jitter = 5,
   extras = list(
     cluster = list(k.nn = 50, k.cluster = 10)
@@ -173,8 +173,8 @@ spatialise(
 spatialise(
   path = input_file,
   return.type = "visium",
-  downsample = 100,
-  point.size = 0.25,
+  downsample = 200,
+  point.size = 0.01,
   extras = list(
     cluster = list(k.nn = 50, k.cluster = 10)
   )

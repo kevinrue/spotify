@@ -12,8 +12,17 @@
 #' img_raw <- image_read(path = img)
 #' img_data <- image_data(img_raw)
 #' is.matrix(firstLayerNotWhite(img_data))
+#' is.matrix(firstLayerWhite(img_data))
 firstLayerNotWhite <- function(img_data) {
   img_matrix <- img_data[1, ,] != "ff"
+  storage.mode(img_matrix) <- "integer"
+  img_matrix
+}
+
+#' @export
+#' @rdname firstLayerNotWhite
+firstLayerWhite <- function(img_data) {
+  img_matrix <- img_data[1, ,] == "ff"
   storage.mode(img_matrix) <- "integer"
   img_matrix
 }
