@@ -145,9 +145,6 @@ jobs:
 
           ## Required for terra
           brew install gdal
-          
-          ## Required for units
-          brew install udunits
 
           ## Temporary fix for freetype (https://github.com/r-lib/ragg/issues/170; Sep 2024)
           #brew install --cask https://raw.githubusercontent.com/Homebrew/homebrew-core/d28afc3bfdb5d24eab02157bfffcc9e17ed6666c/Formula/f/freetype.rb
