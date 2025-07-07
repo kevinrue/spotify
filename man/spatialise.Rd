@@ -12,6 +12,7 @@ spatialise(
   jitter = 1,
   point.size = 1,
   img2matrix.FUN = firstLayerNotWhite,
+  invert = FALSE,
   extras = list()
 )
 }
@@ -27,6 +28,8 @@ spatialise(
 \item{point.size}{Point size}
 
 \item{img2matrix.FUN}{Function converting image data to a matrix.}
+
+\item{invert}{Use negative of the image.}
 
 \item{extras}{List of options for sub-functions.}
 }

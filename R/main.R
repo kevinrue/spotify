@@ -8,6 +8,7 @@
 #' @param jitter Amount of jitter.
 #' @param point.size Point size
 #' @param img2matrix.FUN Function converting image data to a matrix.
+#' @param invert Use negative of the image.
 #' @param extras List of options for sub-functions.
 #'
 #' @return A `ggplot` object.
@@ -36,6 +37,7 @@ spatialise <- function(
   jitter = 1,
   point.size = 1,
   img2matrix.FUN = firstLayerNotWhite,
+  invert = FALSE,
   extras = list()
 ) {
   return.type <- match.arg(return.type)
@@ -63,6 +65,10 @@ spatialise <- function(
   }
   
   img_matrix <- img2matrix.FUN(img_data)
+  
+  if (invert) {
+    img_matrix <- 1 - img_matrix
+  }
   
   if (return.type == "matrix") {
     return(img_matrix)
