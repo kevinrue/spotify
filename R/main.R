@@ -52,19 +52,23 @@ spatialise <- function(
     return(img_raw)
   }
   
-  img_flat <- image_flatten(img_raw, extras$image_flatten$operator)
-  
-  if (return.type == "flatten") {
-    return(img_flat)
+  if (identical(img2matrix.FUN, ebimage_thresh)) {
+    img_matrix <- ebimage_thresh(img_raw)
+  } else {
+    img_flat <- image_flatten(img_raw, extras$image_flatten$operator)
+    
+    if (return.type == "flatten") {
+      return(img_flat)
+    }
+    
+    img_data <- image_data(img_flat)
+    
+    if (return.type == "data") {
+      return(img_data)
+    }
+    
+    img_matrix <- img2matrix.FUN(img_data)
   }
-  
-  img_data <- image_data(img_flat)
-  
-  if (return.type == "data") {
-    return(img_data)
-  }
-  
-  img_matrix <- img2matrix.FUN(img_data)
   
   if (invert) {
     img_matrix <- 1 - img_matrix
