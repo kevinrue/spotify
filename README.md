@@ -26,7 +26,7 @@ Xenium-like                |  Visium-like
 
 ## Installation
 
-_spatalist_ can be easily installed from GitHub using `remotes::install_github()`:
+_spotify_ can be easily installed from GitHub using `remotes::install_github()`:
 
 ```r
 install.packages("remotes")
