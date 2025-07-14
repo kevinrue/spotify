@@ -1,6 +1,6 @@
 ---
 title: >
-  Getting started
+  Spotify Yourself
 author:
 - name: Kevin Rue-Albrecht
   affiliation: 
@@ -13,7 +13,7 @@ output:
     toc: true
     toc_float: true
 vignette: >
-  %\VignetteIndexEntry{Getting started}
+  %\VignetteIndexEntry{Spotify Yourself}
   %\VignetteEncoding{UTF-8}  
   %\VignettePackage{spotify}
   %\VignetteKeywords{Visualization}
