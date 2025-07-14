@@ -1,10 +1,11 @@
-pandoc: '3.4'
-pkgdown: 2.1.1
+pandoc: 3.7.0.2
+pkgdown: 2.1.3
 pkgdown_sha: ~
 articles:
+  kevin: kevin.html
   radcliffe-camera: radcliffe-camera.html
-  spatialist: spatialist.html
-last_built: 2024-10-06T21:07Z
+  spotify: spotify.html
+last_built: 2025-07-14T12:29Z
 urls:
   reference: https://kevinrue.github.io/spatialist/reference
   article: https://kevinrue.github.io/spatialist/articles
