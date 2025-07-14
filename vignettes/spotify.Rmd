@@ -1,6 +1,6 @@
 ---
 title: >
-  Spotify Yourself
+  Getting Started
 author:
 - name: Kevin Rue-Albrecht
   affiliation: 
@@ -13,7 +13,7 @@ output:
     toc: true
     toc_float: true
 vignette: >
-  %\VignetteIndexEntry{Spotify Yourself}
+  %\VignetteIndexEntry{Getting Started}
   %\VignetteEncoding{UTF-8}  
   %\VignettePackage{spotify}
   %\VignetteKeywords{Visualization}
@@ -167,7 +167,8 @@ spotify(
   extras = list(
     cluster = list(k.nn = 50, k.cluster = 10)
   )
-) + theme_void() + guides(colour = "none")
+) + theme_void() + guides(colour = "none") +
+  scale_colour_viridis_d()
 ```
 
 ### Visium-like

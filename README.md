@@ -1,3 +1,6 @@
+<img src="https://kevinrue.github.io/spotify/articles/spotify_files/figure-html/spatial-1.png" width=200 align="right">
+<br/>
+
 # _spotify_ - Spotify your images!
 
 <!-- badges: start -->
@@ -36,3 +39,8 @@ Spotify images
 ## Code of Conduct
   
 Please note that the spotify project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
+
+## Credits
+
+Logo idea by Catherine Lovegrove.
+
