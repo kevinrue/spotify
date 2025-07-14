@@ -1,6 +1,6 @@
 ---
 title: >
-  Radcliffe Camera
+  Spotify Yourself
 author:
 - name: Kevin Rue-Albrecht
   affiliation: 
@@ -13,7 +13,7 @@ output:
     toc: true
     toc_float: true
 vignette: >
-  %\VignetteIndexEntry{Radcliffe Camera}
+  %\VignetteIndexEntry{Spotify Yourself}
   %\VignetteEncoding{UTF-8}  
   %\VignettePackage{spotify}
   %\VignetteKeywords{Visualization}
@@ -63,9 +63,7 @@ library(ggplot2)
 ## Input file
 
 ```{r}
-input_file <- tempfile(fileext = ".jpg")
-dir.create(dirname(input_file))
-download.file(url = "https://lh3.googleusercontent.com/p/AF1QipOCPWTCh3keAMBioweiqUf0PZHOaxIUCekJThB9=s1360-w1360-h1020", destfile = input_file)
+input_file <- system.file(package = "spotify", "spotify.jpg")
 ```
 
 ## Output types
@@ -73,43 +71,44 @@ download.file(url = "https://lh3.googleusercontent.com/p/AF1QipOCPWTCh3keAMBiowe
 ### Raw image
 
 ```{r raw, fig.alt = "Raw image."}
-spatial_thing <- spotify(
+kevin <- spotify(
   path = input_file
 )
-print(spatial_thing)
+print(kevin)
 ```
 
 ### Flattened image
 
 ```{r flatten, fig.alt = "Flattened image."}
-spatial_thing <- spotify(
+kevin <- spotify(
   path = input_file,
   return.type = "flatten",
   extras = list(
     image_flatten = list(operator = "Modulate")
   )
 )
-print(spatial_thing)
+print(kevin)
 ```
 
 ### Image data
 
 ```{r data}
-spatial_thing <- spotify(
+kevin <- spotify(
   path = input_file,
   return.type = "data"
 )
-spatial_thing
+kevin
 ```
 
 ### Processed matrix
 
 ```{r matrix}
-spatial_thing <- spotify(
+kevin <- spotify(
   path = input_file,
-  return.type = "matrix"
+  return.type = "matrix",
+  invert = TRUE
 )
-dim(spatial_thing)
+dim(kevin)
 ```
 
 ### Heat map
@@ -117,36 +116,40 @@ dim(spatial_thing)
 ```{r heatmap, fig.alt = "Heat map.", fig.height=6, fig.width=7}
 spotify(
   path = input_file,
-  return.type = "heatmap"
+  return.type = "heatmap",
+  invert = TRUE
 )
 ```
 
 ### Pixel coordinates
 
-```{r xy, fig.height=6, fig.width=7}
-spatial_thing <- spotify(
+```{r xy}
+kevin <- spotify(
   path = input_file,
-  return.type = "xy"
+  return.type = "xy",
+  invert = TRUE
 )
-head(spatial_thing)
+head(kevin)
 ```
 
 ### Scatter plot
 
-```{r point, fig.alt = "Scatter plot.", fig.height=6, fig.width=7}
+```{r point, fig.alt = "Scatter plot."}
 spotify(
   path = input_file,
   return.type = "point",
+  invert = TRUE,
   downsample = 100
 ) + theme_void()
 ```
 
 ### Jittered scatter plot
 
-```{r jitter, fig.alt = "Jittered scatter plot.", fig.height=6, fig.width=7}
+```{r jitter, fig.alt = "Jittered scatter plot."}
 spotify(
   path = input_file,
   return.type = "jitter",
+  invert = TRUE,
   downsample = 100,
   jitter = 5
 ) + theme_void()
@@ -154,37 +157,32 @@ spotify(
 
 ### Xenium-like
 
-```{r spatial, fig.alt = "Xenium-like plot.", fig.height=6, fig.width=7}
+```{r spatial, fig.alt = "Xenium-like plot."}
 spotify(
   path = input_file,
   return.type = "spatial",
-  downsample = 150,
-  jitter = 3,
-  point.size = 0.5,
+  invert = TRUE,
+  downsample = 75,
+  jitter = 5,
   extras = list(
-    cluster = list(k.nn = 50, k.cluster = 9)
+    cluster = list(k.nn = 50, k.cluster = 10)
   )
-) + 
-  coord_cartesian(ylim = c(NA, -90)) +
-  theme_void() + guides(colour = "none") +
-  scale_colour_brewer(palette = "Paired")
+) + theme_void() + guides(colour = "none")
 ```
 
 ### Visium-like
 
-```{r visium, fig.alt = "Visium-like plot.", fig.height=6, fig.width=7}
+```{r visium, fig.alt = "Visium-like plot."}
 spotify(
   path = input_file,
   return.type = "visium",
-  downsample = 200,
-  point.size = 0.1,
+  invert = TRUE,
+  downsample = 100,
+  point.size = 0.25,
   extras = list(
     cluster = list(k.nn = 50, k.cluster = 10)
   )
-) + 
-  coord_cartesian(ylim = c(NA, -90)) +
-  theme_void() + guides(colour = "none") +
-  scale_colour_brewer(palette = "Paired")
+) + theme_void() + guides(colour = "none")
 ```
 
 # Additional information

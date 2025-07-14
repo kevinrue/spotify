@@ -1,4 +1,4 @@
-#' Spatialise Images
+#' Spotify Images
 #' 
 #' Main function.
 #'
@@ -17,20 +17,20 @@
 #' @importFrom iSEE subsetPointsByGrid
 #'
 #' @examples
-#' kevin <- spatialise(
-#'   path = system.file(package = "spatialist", "Kevin.jpg")
+#' kevin <- spotify(
+#'   path = system.file(package = "spotify", "Kevin.jpg")
 #' )
 #' print(kevin)
 #' 
-#' kevin <- spatialise(
-#'   path = system.file(package = "spatialist", "Kevin.jpg"),
+#' kevin <- spotify(
+#'   path = system.file(package = "spotify", "Kevin.jpg"),
 #'   return.type = "flatten",
 #'   extras = list(
 #'     image_flatten = list(operator = "Threshold")
 #'   )
 #' )
 #' print(kevin)
-spatialise <- function(
+spotify <- function(
   path,
   return.type = c("raw", "flatten", "data", "matrix", "heatmap", "xy", "point", "jitter", "spatial", "visium"),
   downsample = 150,
