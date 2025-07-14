@@ -73,7 +73,7 @@ download.file(url = "https://lh3.googleusercontent.com/p/AF1QipOCPWTCh3keAMBiowe
 ### Raw image
 
 ```{r raw, fig.alt = "Raw image."}
-spatial_thing <- spotify(
+radcliffe_camera <- spotify(
   path = input_file
 )
 print(spatial_thing)
@@ -82,7 +82,7 @@ print(spatial_thing)
 ### Flattened image
 
 ```{r flatten, fig.alt = "Flattened image."}
-spatial_thing <- spotify(
+radcliffe_camera <- spotify(
   path = input_file,
   return.type = "flatten",
   extras = list(
@@ -95,7 +95,7 @@ print(spatial_thing)
 ### Image data
 
 ```{r data}
-spatial_thing <- spotify(
+radcliffe_camera <- spotify(
   path = input_file,
   return.type = "data"
 )
@@ -105,7 +105,7 @@ spatial_thing
 ### Processed matrix
 
 ```{r matrix}
-spatial_thing <- spotify(
+radcliffe_camera <- spotify(
   path = input_file,
   return.type = "matrix"
 )
@@ -124,7 +124,7 @@ spotify(
 ### Pixel coordinates
 
 ```{r xy, fig.height=6, fig.width=7}
-spatial_thing <- spotify(
+radcliffe_camera <- spotify(
   path = input_file,
   return.type = "xy"
 )

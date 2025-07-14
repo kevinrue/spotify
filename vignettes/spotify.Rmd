@@ -71,7 +71,7 @@ input_file <- system.file(package = "spotify", "spotify.jpg")
 ### Raw image
 
 ```{r raw, fig.alt = "Raw image."}
-kevin <- spotify(
+spotify <- spotify(
   path = input_file
 )
 print(kevin)
@@ -80,7 +80,7 @@ print(kevin)
 ### Flattened image
 
 ```{r flatten, fig.alt = "Flattened image."}
-kevin <- spotify(
+spotify <- spotify(
   path = input_file,
   return.type = "flatten",
   extras = list(
@@ -93,7 +93,7 @@ print(kevin)
 ### Image data
 
 ```{r data}
-kevin <- spotify(
+spotify <- spotify(
   path = input_file,
   return.type = "data"
 )
@@ -103,7 +103,7 @@ kevin
 ### Processed matrix
 
 ```{r matrix}
-kevin <- spotify(
+spotify <- spotify(
   path = input_file,
   return.type = "matrix",
   invert = TRUE
@@ -124,7 +124,7 @@ spotify(
 ### Pixel coordinates
 
 ```{r xy}
-kevin <- spotify(
+spotify <- spotify(
   path = input_file,
   return.type = "xy",
   invert = TRUE
