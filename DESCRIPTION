@@ -1,5 +1,5 @@
-Package: spatialist
-Title: Spatialise images
+Package: spotify
+Title: Spotify Your Images
 Version: 0.1.0
 Date: 2024-09-13
 Authors@R: c(person("Kevin", "Rue-Albrecht", role = c("aut", "cre"), email = "kevinrue67@gmail.com", comment = c(ORCID = "0000-0003-3899-3872")))
@@ -20,8 +20,8 @@ Suggests:
   rmarkdown,
   pkgdown,
   htmltools
-URL: https://kevinrue.github.io/spatialist
-BugReports: https://github.com/kevinrue/spatialist/issues
+URL: https://kevinrue.github.io/spotify
+BugReports: https://github.com/kevinrue/spotify/issues
 License: MIT + file LICENSE
 VignetteBuilder: knitr
 Encoding: UTF-8

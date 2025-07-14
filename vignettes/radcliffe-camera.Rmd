@@ -7,7 +7,7 @@ author:
   - &id1 MRC WIMM Centre for Computational Biology, University of Oxford, Oxford, OX3 9DS, UK
   email: kevinrue67@gmail.com
 date: "`r BiocStyle::doc_date()`"
-package: "`r BiocStyle::pkg_ver('spatialist')`"
+package: "`r BiocStyle::pkg_ver('spotify')`"
 output: 
   BiocStyle::html_document:
     toc: true
@@ -15,19 +15,19 @@ output:
 vignette: >
   %\VignetteIndexEntry{Radcliffe Camera}
   %\VignetteEncoding{UTF-8}  
-  %\VignettePackage{spatialist}
+  %\VignettePackage{spotify}
   %\VignetteKeywords{Visualization}
   %\VignetteEngine{knitr::rmarkdown}
 editor_options: 
   chunk_output_type: console
-bibliography: spatialist.bib
+bibliography: spotify.bib
 ---
 
 **Compiled date**: `r Sys.Date()`
 
 **Last edited**: 2020-04-20
 
-**License**: `r packageDescription("spatialist")[["License"]]`
+**License**: `r packageDescription("spotify")[["License"]]`
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
@@ -44,12 +44,12 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 
 # Introduction 
 
-`r BiocStyle::Githubpkg("kevinrue/spatialist")` is an *R* package.
+`r BiocStyle::Githubpkg("kevinrue/spotify")` is an *R* package.
 
 Once installed, the package can be loaded and attached to your current workspace as follows:
 
 ```{r library, message=FALSE}
-library(spatialist)
+library(spotify)
 ```
 
 Other helpful libraries.
@@ -73,7 +73,7 @@ download.file(url = "https://lh3.googleusercontent.com/p/AF1QipOCPWTCh3keAMBiowe
 ### Raw image
 
 ```{r raw, fig.alt = "Raw image."}
-spatial_thing <- spatialise(
+spatial_thing <- spotify(
   path = input_file
 )
 print(spatial_thing)
@@ -82,7 +82,7 @@ print(spatial_thing)
 ### Flattened image
 
 ```{r flatten, fig.alt = "Flattened image."}
-spatial_thing <- spatialise(
+spatial_thing <- spotify(
   path = input_file,
   return.type = "flatten",
   extras = list(
@@ -95,7 +95,7 @@ print(spatial_thing)
 ### Image data
 
 ```{r data}
-spatial_thing <- spatialise(
+spatial_thing <- spotify(
   path = input_file,
   return.type = "data"
 )
@@ -105,7 +105,7 @@ spatial_thing
 ### Processed matrix
 
 ```{r matrix}
-spatial_thing <- spatialise(
+spatial_thing <- spotify(
   path = input_file,
   return.type = "matrix"
 )
@@ -115,7 +115,7 @@ dim(spatial_thing)
 ### Heat map
 
 ```{r heatmap, fig.alt = "Heat map.", fig.height=6, fig.width=7}
-spatialise(
+spotify(
   path = input_file,
   return.type = "heatmap"
 )
@@ -124,7 +124,7 @@ spatialise(
 ### Pixel coordinates
 
 ```{r xy, fig.height=6, fig.width=7}
-spatial_thing <- spatialise(
+spatial_thing <- spotify(
   path = input_file,
   return.type = "xy"
 )
@@ -134,7 +134,7 @@ head(spatial_thing)
 ### Scatter plot
 
 ```{r point, fig.alt = "Scatter plot.", fig.height=6, fig.width=7}
-spatialise(
+spotify(
   path = input_file,
   return.type = "point",
   downsample = 100
@@ -144,7 +144,7 @@ spatialise(
 ### Jittered scatter plot
 
 ```{r jitter, fig.alt = "Jittered scatter plot.", fig.height=6, fig.width=7}
-spatialise(
+spotify(
   path = input_file,
   return.type = "jitter",
   downsample = 100,
@@ -155,7 +155,7 @@ spatialise(
 ### Xenium-like
 
 ```{r spatial, fig.alt = "Xenium-like plot.", fig.height=6, fig.width=7}
-spatialise(
+spotify(
   path = input_file,
   return.type = "spatial",
   downsample = 150,
@@ -173,7 +173,7 @@ spatialise(
 ### Visium-like
 
 ```{r visium, fig.alt = "Visium-like plot.", fig.height=6, fig.width=7}
-spatialise(
+spotify(
   path = input_file,
   return.type = "visium",
   downsample = 200,
@@ -192,10 +192,10 @@ spatialise(
 The GitHub repository contains the development version of the package, where new functionality is added over time.
 The authors appreciate well-considered suggestions for improvements or new features, or even better, pull requests.
 
-If you use `r BiocStyle::Githubpkg("kevinrue/spatialist")` for your analysis, please cite it as shown below:
+If you use `r BiocStyle::Githubpkg("kevinrue/spotify")` for your analysis, please cite it as shown below:
 
 ```{r citation}
-citation("spatialist")
+citation("spotify")
 ```
 
 # Session Info {.unnumbered}
