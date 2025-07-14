@@ -1,4 +1,5 @@
-<img src="https://kevinrue.github.io/spotify/articles/spotify_files/figure-html/spatial-1.png" width=200 align="right">
+<img src="https://kevinrue.github.io/spotify/articles/spotify_files/figure-html/spatial-1.png" style="float:right; height:150px;">
+
 <br/>
 
 # _spotify_ - Spotify your images!
