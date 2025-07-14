@@ -41,12 +41,12 @@ Main function.
 }
 \examples{
 kevin <- spotify(
-  path = system.file(package = "spatialist", "Kevin.jpg")
+  path = system.file(package = "spotify", "Kevin.jpg")
 )
 print(kevin)
 
 kevin <- spotify(
-  path = system.file(package = "spatialist", "Kevin.jpg"),
+  path = system.file(package = "spotify", "Kevin.jpg"),
   return.type = "flatten",
   extras = list(
     image_flatten = list(operator = "Threshold")
