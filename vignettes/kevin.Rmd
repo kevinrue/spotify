@@ -1,6 +1,6 @@
 ---
 title: >
-  Spotify Yourself
+  Getting started
 author:
 - name: Kevin Rue-Albrecht
   affiliation: 
@@ -13,7 +13,7 @@ output:
     toc: true
     toc_float: true
 vignette: >
-  %\VignetteIndexEntry{Spotify Yourself}
+  %\VignetteIndexEntry{Getting started}
   %\VignetteEncoding{UTF-8}  
   %\VignettePackage{spotify}
   %\VignetteKeywords{Visualization}
@@ -63,7 +63,7 @@ library(ggplot2)
 ## Input file
 
 ```{r}
-input_file <- system.file(package = "spotify", "spotify.jpg")
+input_file <- system.file(package = "spotify", "Kevin.jpg")
 ```
 
 ## Output types
@@ -105,8 +105,7 @@ kevin
 ```{r matrix}
 kevin <- spotify(
   path = input_file,
-  return.type = "matrix",
-  invert = TRUE
+  return.type = "matrix"
 )
 dim(kevin)
 ```
@@ -116,8 +115,7 @@ dim(kevin)
 ```{r heatmap, fig.alt = "Heat map.", fig.height=6, fig.width=7}
 spotify(
   path = input_file,
-  return.type = "heatmap",
-  invert = TRUE
+  return.type = "heatmap"
 )
 ```
 
@@ -126,8 +124,7 @@ spotify(
 ```{r xy}
 kevin <- spotify(
   path = input_file,
-  return.type = "xy",
-  invert = TRUE
+  return.type = "xy"
 )
 head(kevin)
 ```
@@ -138,7 +135,6 @@ head(kevin)
 spotify(
   path = input_file,
   return.type = "point",
-  invert = TRUE,
   downsample = 100
 ) + theme_void()
 ```
@@ -149,7 +145,6 @@ spotify(
 spotify(
   path = input_file,
   return.type = "jitter",
-  invert = TRUE,
   downsample = 100,
   jitter = 5
 ) + theme_void()
@@ -161,7 +156,6 @@ spotify(
 spotify(
   path = input_file,
   return.type = "spatial",
-  invert = TRUE,
   downsample = 75,
   jitter = 5,
   extras = list(
@@ -176,7 +170,6 @@ spotify(
 spotify(
   path = input_file,
   return.type = "visium",
-  invert = TRUE,
   downsample = 100,
   point.size = 0.25,
   extras = list(

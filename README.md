@@ -18,7 +18,7 @@ and produce plots that simulate spatial omics data
 
 Xenium-like                |  Visium-like              
 :-------------------------:|:-------------------------:
-![Xenium-like output.](https://kevinrue.github.io/spotify/articles/spotify_files/figure-html/spatial-1.png)  |  ![Visium-like output.](https://kevinrue.github.io/spotify/articles/spotify_files/figure-html/visium-1.png)
+![Xenium-like output.](https://kevinrue.github.io/spotify/articles/kevin_files/figure-html/spatial-1.png)  |  ![Visium-like output.](https://kevinrue.github.io/spotify/articles/kevin_files/figure-html/visium-1.png)
 
 ## Installation
 
