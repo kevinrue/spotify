@@ -71,44 +71,44 @@ input_file <- system.file(package = "spotify", "spotify.jpg")
 ### Raw image
 
 ```{r raw, fig.alt = "Raw image."}
-spotify <- spotify(
+spotified <- spotify(
   path = input_file
 )
-print(kevin)
+print(spotified)
 ```
 
 ### Flattened image
 
 ```{r flatten, fig.alt = "Flattened image."}
-spotify <- spotify(
+spotified <- spotify(
   path = input_file,
   return.type = "flatten",
   extras = list(
     image_flatten = list(operator = "Modulate")
   )
 )
-print(kevin)
+print(spotified)
 ```
 
 ### Image data
 
 ```{r data}
-spotify <- spotify(
+spotified <- spotify(
   path = input_file,
   return.type = "data"
 )
-kevin
+spotified
 ```
 
 ### Processed matrix
 
 ```{r matrix}
-spotify <- spotify(
+spotified <- spotify(
   path = input_file,
   return.type = "matrix",
   invert = TRUE
 )
-dim(kevin)
+dim(spotified)
 ```
 
 ### Heat map
@@ -124,12 +124,12 @@ spotify(
 ### Pixel coordinates
 
 ```{r xy}
-spotify <- spotify(
+spotified <- spotify(
   path = input_file,
   return.type = "xy",
   invert = TRUE
 )
-head(kevin)
+head(spotified)
 ```
 
 ### Scatter plot
