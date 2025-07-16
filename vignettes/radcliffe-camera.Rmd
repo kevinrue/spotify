@@ -76,7 +76,7 @@ download.file(url = "https://lh3.googleusercontent.com/p/AF1QipOCPWTCh3keAMBiowe
 radcliffe_camera <- spotify(
   path = input_file
 )
-print(spatial_thing)
+print(radcliffe_camera)
 ```
 
 ### Flattened image
@@ -89,7 +89,7 @@ radcliffe_camera <- spotify(
     image_flatten = list(operator = "Modulate")
   )
 )
-print(spatial_thing)
+print(radcliffe_camera)
 ```
 
 ### Image data
@@ -99,7 +99,7 @@ radcliffe_camera <- spotify(
   path = input_file,
   return.type = "data"
 )
-spatial_thing
+radcliffe_camera
 ```
 
 ### Processed matrix
@@ -109,7 +109,7 @@ radcliffe_camera <- spotify(
   path = input_file,
   return.type = "matrix"
 )
-dim(spatial_thing)
+dim(radcliffe_camera)
 ```
 
 ### Heat map
@@ -128,7 +128,7 @@ radcliffe_camera <- spotify(
   path = input_file,
   return.type = "xy"
 )
-head(spatial_thing)
+head(radcliffe_camera)
 ```
 
 ### Scatter plot
